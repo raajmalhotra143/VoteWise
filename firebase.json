@@ -1,0 +1,14 @@
+{
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  },
+  "projects": {
+    "default": "election-guide-1777049081"
+  }
+}

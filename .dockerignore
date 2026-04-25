@@ -1,0 +1,8 @@
+node_modules
+dist
+.git
+.gitignore
+.idx
+.vscode
+README.md
+GEMINI.md
