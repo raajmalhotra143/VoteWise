@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# VoteWise — Your guide to India's democracy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+VoteWise is an interactive election process education assistant designed for Indian voters, especially first-time voters. It simplifies the election process, explains voter rights, debunks myths, and provides an AI-powered chat assistant.
 
-Currently, two official plugins are available:
+![VoteWise Screenshot](https://via.placeholder.com/800x400.png?text=VoteWise+Screenshot)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Interactive Election Timeline:** Step-by-step visual guide to the entire election process (Lok Sabha & Vidhan Sabha).
+- **AI Chat Assistant:** Ask any election-related question and get answers based on official ECI guidelines. Powered by Claude API.
+- **Election Knowledge Quiz:** Test your knowledge on Voter Basics, Election Process, and Voting Rights.
+- **Myth Buster:** Learn the truth about common election myths and rumors.
+- **User Profiles:** Track your quiz progress and stats across sessions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React 18 + Vite + TypeScript
+- **Styling:** Tailwind CSS v4, Glassmorphism UI
+- **Authentication:** Firebase Auth (Google + Email/Password)
+- **Database:** Supabase (PostgreSQL)
+- **AI:** Anthropic Claude (claude-3-sonnet-20240229)
+- **3D Graphics:** Spline (@splinetool/react-spline)
+- **Animations:** Framer Motion
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Setup Instructions
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/votewise.git
+   cd votewise
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Environment Variables**
+   Create a `.env` file in the root directory and copy the contents from `.env.example`. Fill in your Firebase, Supabase, and Anthropic API keys.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Built for PromptWars 2026
+This application was built as part of PromptWars 2026, demonstrating AI-assisted development and interactive civic education tools.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Live Demo
+[Live Demo Link Placeholder]
+# VoteWise
